@@ -16,7 +16,7 @@ def authenticate_token():
 
             try:
                 response = requests.post(
-                    url=os.getenv('API_URL') + "validate-token",
+                    url=os.getenv('API_URL') + "auth/validate-token",
                     json=data,
                     headers={"Content-Type": "application/json"},
                 )
